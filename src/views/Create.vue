@@ -1,6 +1,6 @@
 <template>
   <div class="create">
-    <form>
+    <form @submit.prevent="handleSubmit">
       <label>Title:</label>
       <input v-model="title" type="text" required />
       <label>Content</label>
@@ -14,6 +14,12 @@
 </template>
 
 <script>
+// challenge
+//   - add a submit event handler to the form
+//   - inside the handler, make a POST request to add a new post to db.json
+//   - try using async & await to make the request
+//   - the endpoint is /posts to add a new post
+
 import { ref } from '@vue/reactivity';
 
 export default {
@@ -31,7 +37,21 @@ export default {
       tag.value = '';
     };
 
-    return { title, body, tag, handleKeydown, tags };
+    const handleSubmit = async () => {
+      const post = {
+        title: title.value,
+        body: body.value,
+        tags: tags.value,
+      };
+
+      await fetch('http://localhost:3000/posts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(post),
+      });
+    };
+
+    return { title, body, tag, handleKeydown, tags, handleSubmit };
   },
 };
 </script>
