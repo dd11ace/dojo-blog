@@ -15,6 +15,7 @@
 
 <script>
 import { ref } from '@vue/reactivity';
+import { useRouter } from 'vue-router';
 
 export default {
   setup() {
@@ -22,6 +23,10 @@ export default {
     const body = ref('');
     const tag = ref('');
     const tags = ref([]);
+
+    const router = useRouter();
+    // router.go(-1)
+    // router.go(1)
 
     const handleKeydown = () => {
       if (!tags.value.includes(tag.value)) {
@@ -43,6 +48,8 @@ export default {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(post),
       });
+
+      router.push({ name: 'home' });
     };
 
     return { title, body, tag, handleKeydown, tags, handleSubmit };
