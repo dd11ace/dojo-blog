@@ -8,7 +8,7 @@
 
 <script>
 import { onMounted, onUnmounted, onUpdated } from '@vue/runtime-core';
-import SinglePost from '../components/SinglePost.vue';
+import SinglePost from './SinglePost.vue';
 
 export default {
   props: ['posts'],

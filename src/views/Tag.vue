@@ -13,7 +13,7 @@
 
 <script>
 import Spinner from '../components/Spinner.vue';
-import PostList from '../components/PostLIst.vue';
+import PostList from '../components/PostList.vue';
 import TagCloud from '../components/TagCloud.vue';
 import getPosts from '../composables/getPosts';
 import { useRoute } from 'vue-router';
