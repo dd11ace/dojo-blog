@@ -118,5 +118,6 @@ const handleSubmit = async () => {
     border-radius: 20px;
     font-size: 14px;
   }
+  
 }
 </style>
