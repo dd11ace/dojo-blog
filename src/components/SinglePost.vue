@@ -1,7 +1,7 @@
 <template>
-  <div class="singlepost">
+  <div class="single-post">
     <router-link :to="{ name: 'Details', params: { id: post.id } }">
-      <h3 class="singlepost__title">{{ post.title }}</h3>
+      <h3 class="single-post__title">{{ post.title }}</h3>
     </router-link>
     <p>{{ snippet }}</p>
     <span v-for="tag in post.tags" :key="tag"> #{{ tag }} </span>
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss">
-.singlepost {
+.single-post {
   margin: 0 40px 30px;
   padding-bottom: 30px;
   border-bottom: 1px dashed #e7e7e7;
