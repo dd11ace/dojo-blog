@@ -1,9 +1,9 @@
 <template>
   <div v-if="error">{{ error }}</div>
-  <div v-if="post" class="post">
-    <h3>{{ post.title }}</h3>
-    <p class="pre">{{ post.body }}</p>
-    <button @click="handleClick" class="delete">delete post</button>
+  <div v-if="post" class="details">
+    <h3 class="details__title">{{ post.title }}</h3>
+    <p class="details__text">{{ post.body }}</p>
+    <button @click="handleClick" class="details__delete">delete post</button>
   </div>
   <div v-else>
     <Spinner />
@@ -39,20 +39,20 @@ export default {
 };
 </script>
 
-<style>
-.post {
+<style lang="scss">
+.details {
   max-width: 1200px;
   margin: 0 auto;
-}
-.post p {
-  color: #444;
-  line-height: 1.5em;
-  margin-top: 4px;
-}
-.pre {
-  white-space: pre-wrap;
-}
-button.delete {
-  margin: 10px auto;
+
+  &__text {
+    color: #444;
+    line-height: 1.5em;
+    margin-top: 4px;
+    white-space: pre-wrap;
+  }
+
+  &__delete {
+    margin: 10px auto;
+  }
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <div class="spin"></div>
+  <div class="spinner"></div>
 </template>
 
 <style>
-.spin {
+.spinner {
   display: block;
   width: 40px;
   height: 40px;
@@ -11,10 +11,10 @@
   border: 3px solid transparent;
   border-radius: 50%;
   border-top-color: #ff8800;
-  animation: spin 1s ease infinite;
+  animation: spinner 1s ease infinite;
 }
 
-@keyframes spin {
+@keyframes spinner {
   to {
     transform: rotateZ(360deg);
   }
