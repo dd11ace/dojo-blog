@@ -1,8 +1,8 @@
 <script setup>
-import PostList from '../components/PostList.vue';
-import TagCloud from '../components/TagCloud.vue';
-import getPosts from '../composables/getPosts';
-import Spinner from '../components/Spinner.vue';
+import PostList from '@/components/PostList.vue';
+import TagCloud from '@/components/TagCloud.vue';
+import getPosts from '@/composables/getPosts';
+import Spinner from '@/components/Spinner.vue';
 
 const { posts, error, load } = getPosts();
 

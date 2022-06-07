@@ -42,6 +42,7 @@
     color: var(--gray);
     text-decoration: none;
     margin-left: 20px;
+    
     &--active.router-link-active {
       color: var(--dark-grey);
       font-weight: bold;

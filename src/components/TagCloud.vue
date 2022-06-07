@@ -1,5 +1,5 @@
 <script setup>
-import useTags from '../composables/useTags';
+import useTags from '@/composables/useTags';
 
 const props = defineProps(['posts']);
 
@@ -32,15 +32,17 @@ const { tags } = useTags(props.posts);
   &__list {
     display: inline-block;
     padding: 10px;
-  }
 
-  &__list-item {
+  &-item {
     color: var(--light-gray);
     text-decoration: none;
+    
     &--active.router-link-active {
       color: var(--main-orange);
       font-weight: bold;
     }
   }
+  }
+
 }
 </style>

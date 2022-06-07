@@ -23,6 +23,7 @@ const snippet = computed(() => {
   margin: 0 40px 30px;
   padding-bottom: 30px;
   border-bottom: 1px dashed #e7e7e7;
+  
   &__title {
     display: inline-block;
     position: relative;

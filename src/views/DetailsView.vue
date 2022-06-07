@@ -1,7 +1,7 @@
 <script setup>
-import getPost from '../composables/getPost';
-import Spinner from '../components/Spinner.vue';
-import Button from '../components/Button.vue';
+import getPost from '@/composables/getPost';
+import Spinner from '@/components/Spinner.vue';
+import Button from '@/components/Button.vue';
 import { useRoute, useRouter } from 'vue-router';
 import { projectFirestore } from '@/firebase/config';
 

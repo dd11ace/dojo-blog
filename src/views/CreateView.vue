@@ -1,5 +1,5 @@
 <script setup>
-import Button from '../components/Button.vue';
+import Button from '@/components/Button.vue';
 import { ref } from '@vue/reactivity';
 import { projectFirestore, timestamp } from '@/firebase/config';
 import { useRouter } from 'vue-router';
