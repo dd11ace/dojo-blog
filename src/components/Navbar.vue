@@ -1,23 +1,25 @@
 <template>
   <header class="navbar-header">
     <h1 class="navbar-header__title">The Dojo Blog</h1>
-    <nav class="navbar-header__list">
-      <li>
-        <router-link
-          :to="{ name: 'home' }"
-          class="navbar-header__item"
-          active-class="navbar-header__item--active"
-          >Home</router-link
-        >
-      </li>
-      <li>
-        <router-link
-          :to="{ name: 'create' }"
-          class="navbar-header__item"
-          active-class="navbar-header__item--active"
-          >Create Post</router-link
-        >
-      </li>
+    <nav>
+      <ul class="navbar-header__list">
+        <li>
+          <router-link
+            :to="{ name: 'home' }"
+            class="navbar-header__item"
+            active-class="navbar-header__item--active"
+            >Home</router-link
+          >
+        </li>
+        <li>
+          <router-link
+            :to="{ name: 'create' }"
+            class="navbar-header__item"
+            active-class="navbar-header__item--active"
+            >Create Post</router-link
+          >
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
