@@ -12,7 +12,7 @@ const { tags } = useTags(props.posts);
     <div v-for="tag in tags" :key="tag" class="tag-cloud__list">
       <router-link
         :to="{ name: 'tag', params: { tag } }"
-        class="tag-cloud__list-item"
+        class="tag-cloud__list-item tag-cloud__list-item--active"
       >
         #{{ tag }}
       </router-link>
@@ -37,7 +37,7 @@ const { tags } = useTags(props.posts);
   &__list-item {
     color: var(--light-gray);
     text-decoration: none;
-    &.router-link-active {
+    &--active.router-link-active {
       color: var(--main-orange);
       font-weight: bold;
     }
