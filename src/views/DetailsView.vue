@@ -32,15 +32,12 @@ export default {
   <div v-if="post" class="details">
     <h3 class="details__title">{{ post.title }}</h3>
     <p class="details__text">{{ post.body }}</p>
-    <button @click="handleClick" class="button details__delete">
-      delete post
-    </button>
+    <button @click="handleClick" class="details__delete">delete post</button>
   </div>
   <div v-else>
     <Spinner />
   </div>
 </template>
-
 
 <style lang="scss">
 .details {
@@ -51,7 +48,7 @@ export default {
     display: inline;
     margin-top: 30px;
     position: relative;
-    color: white;
+    color: var(--white);
     font-size: 20px;
     margin-bottom: 10px;
 
@@ -60,7 +57,7 @@ export default {
       display: block;
       width: 100%;
       height: 100%;
-      background: #ff8800;
+      background: var(--main-orange);
       position: absolute;
       z-index: -1;
       padding-right: 40px;
@@ -70,7 +67,7 @@ export default {
   }
 
   &__text {
-    color: #444;
+    color: var(--dark-grey);
     line-height: 1.5em;
     margin-top: 4px;
     white-space: pre-wrap;
@@ -79,8 +76,8 @@ export default {
   &__delete {
     display: block;
     margin-top: 30px;
-    background: #ff8800;
-    color: white;
+    background: var(--main-orange);
+    color: var(--white);
     border: none;
     padding: 8px 16px;
     font-size: 18px;

@@ -31,7 +31,7 @@ export default {
   &__title {
     border-bottom: 1px solid #eee;
     padding: 16px 8px;
-    color: #444;
+    color: var(--dark-grey);
   }
 
   &__list {
@@ -40,10 +40,10 @@ export default {
   }
 
   &__list-item {
-    color: #ccc;
+    color: var(--light-gray);
     text-decoration: none;
     &.router-link-active {
-      color: #ff8800;
+      color: var(--main-orange);
       font-weight: bold;
     }
   }

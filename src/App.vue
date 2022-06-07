@@ -4,12 +4,12 @@ import Navbar from './components/Navbar.vue';
 
 <template>
   <Navbar />
-  <router-view />
+  <RouterView />
 </template>
 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #2c3e50;
+  color: var(--black-blue);
 }
 </style>

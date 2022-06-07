@@ -32,7 +32,7 @@ export default {
     display: inline-block;
     position: relative;
     font-size: 26px;
-    color: white;
+    color: var(--white);
     margin-bottom: 10px;
     max-width: 400px;
 
@@ -41,7 +41,7 @@ export default {
       display: block;
       width: 100%;
       height: 100%;
-      background: #ff8800;
+      background: var(--main-orange);
       position: absolute;
       z-index: -1;
       padding-right: 40px;

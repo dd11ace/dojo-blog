@@ -31,15 +31,15 @@
   }
 
   &__title {
-    color: #dfdfdf;
+    color: var(--light-gray);
     font-size: 48px;
   }
   &__list-item {
-    color: #bbb;
+    color: var(--gray);
     text-decoration: none;
     margin-left: 20px;
     &.router-link-active {
-      color: #444;
+      color: var(--dark-grey);
       font-weight: bold;
     }
   }

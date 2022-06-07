@@ -60,7 +60,6 @@ const handleSubmit = async () => {
   </div>
 </template>
 
-
 <style lang="scss">
 .create-view {
   max-width: 480px;
@@ -85,7 +84,7 @@ const handleSubmit = async () => {
     margin-top: 30px;
     position: relative;
     font-size: 20px;
-    color: white;
+    color: var(--white);
     margin-bottom: 10px;
 
     &::before {
@@ -93,7 +92,7 @@ const handleSubmit = async () => {
       display: block;
       width: 100%;
       height: 100%;
-      background: #ff8800;
+      background: var(--main-orange);
       position: absolute;
       z-index: -1;
       padding-right: 40px;
@@ -105,8 +104,8 @@ const handleSubmit = async () => {
   &__button {
     display: block;
     margin-top: 30px;
-    background: #ff8800;
-    color: white;
+    background: var(--main-orange);
+    color: var(--white);
     border: none;
     padding: 8px 16px;
     font-size: 18px;
@@ -115,7 +114,7 @@ const handleSubmit = async () => {
   &__tag {
     display: inline-block;
     margin: 10px 10px 0 0;
-    color: #444;
+    color: var(--dark-grey);
     background: #ddd;
     padding: 8px;
     border-radius: 20px;

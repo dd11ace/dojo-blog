@@ -10,7 +10,7 @@
   margin: 30px auto;
   border: 3px solid transparent;
   border-radius: 50%;
-  border-top-color: #ff8800;
+  border-top-color: var(--main-orange);
   animation: spinner 1s ease infinite;
 }
 
