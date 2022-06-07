@@ -1,7 +1,7 @@
 <script setup>
 import SinglePost from './SinglePost.vue';
 
-const props = defineProps({ posts: Array });
+defineProps({ posts: Array });
 </script>
 
 <template>
