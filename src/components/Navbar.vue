@@ -3,12 +3,16 @@
     <h1 class="navbar-header__title">The Dojo Blog</h1>
     <nav class="navbar-header__list">
       <li>
-        <router-link :to="{ name: 'home' }" class="navbar-header__list-item"
+        <router-link
+          :to="{ name: 'home' }"
+          class="navbar-header__list-item navbar-header__list-item--active"
           >Home</router-link
         >
       </li>
       <li>
-        <router-link :to="{ name: 'create' }" class="navbar-header__list-item"
+        <router-link
+          :to="{ name: 'create' }"
+          class="navbar-header__list-item navbar-header__list-item--active"
           >Create Post</router-link
         >
       </li>
@@ -38,7 +42,7 @@
     color: var(--gray);
     text-decoration: none;
     margin-left: 20px;
-    &.router-link-active {
+    &--active.router-link-active {
       color: var(--dark-grey);
       font-weight: bold;
     }
