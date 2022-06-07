@@ -1,8 +1,7 @@
 <script setup>
+import Button from '../components/Button.vue';
 import { ref } from '@vue/reactivity';
 import { projectFirestore, timestamp } from '@/firebase/config';
-
-// import components
 import { useRouter } from 'vue-router';
 
 const title = ref('');
@@ -55,7 +54,7 @@ const handleSubmit = async () => {
       <div v-for="tag in tags" :key="tag" class="create-view__tag">
         #{{ tag }}
       </div>
-      <button class="create-view__button">Add Post</button>
+      <Button>Add Post</Button>
     </form>
   </div>
 </template>
@@ -99,16 +98,6 @@ const handleSubmit = async () => {
       left: -30px;
       transform: rotateZ(-1.5deg);
     }
-  }
-
-  &__button {
-    display: block;
-    margin-top: 30px;
-    background: var(--main-orange);
-    color: var(--white);
-    border: none;
-    padding: 8px 16px;
-    font-size: 18px;
   }
 
   &__tag {

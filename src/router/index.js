@@ -18,7 +18,7 @@ const routes = [
   },
   {
     path: '/create',
-    name: 'dreate',
+    name: 'create',
     component: CreateView,
   },
   {

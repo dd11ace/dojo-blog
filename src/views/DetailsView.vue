@@ -1,6 +1,7 @@
 <script setup>
 import getPost from '../composables/getPost';
 import Spinner from '../components/Spinner.vue';
+import Button from '../components/Button.vue';
 import { useRoute, useRouter } from 'vue-router';
 import { projectFirestore } from '@/firebase/config';
 
@@ -24,9 +25,7 @@ const handleClick = async () => {
   <div v-if="post" class="details-view">
     <h3 class="details-view__title">{{ post.title }}</h3>
     <p class="details-view__text">{{ post.body }}</p>
-    <button @click="handleClick" class="details-view__delete">
-      delete post
-    </button>
+    <Button @click="handleClick">delete post</Button>
   </div>
   <div v-else>
     <Spinner />
@@ -65,16 +64,6 @@ const handleClick = async () => {
     line-height: 1.5em;
     margin-top: 4px;
     white-space: pre-wrap;
-  }
-
-  &__delete {
-    display: block;
-    margin-top: 30px;
-    background: var(--main-orange);
-    color: var(--white);
-    border: none;
-    padding: 8px 16px;
-    font-size: 18px;
   }
 }
 </style>
