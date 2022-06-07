@@ -44,7 +44,7 @@
   }
 
   &__item {
-    color: var(--gray);
+    color: var(--gray-4);
     text-decoration: none;
     margin-left: 20px;
 
