@@ -1,29 +1,22 @@
-<script>
+<script setup>
 import getPost from '../composables/getPost';
 import Spinner from '../components/Spinner.vue';
 import { useRoute, useRouter } from 'vue-router';
 import { projectFirestore } from '@/firebase/config';
 
-export default {
-  props: ['id'],
-  components: { Spinner },
-  setup(props) {
-    const route = useRoute();
-    const router = useRouter();
-    console.log(route);
+const props = defineProps(['id']);
+const route = useRoute();
+const router = useRouter();
+console.log(route);
 
-    const { post, error, load } = getPost(route.params.id);
+const { post, error, load } = getPost(route.params.id);
 
-    load();
+load();
 
-    const handleClick = async () => {
-      await projectFirestore.collection('posts').doc(props.id).delete();
+const handleClick = async () => {
+  await projectFirestore.collection('posts').doc(props.id).delete();
 
-      router.push({ name: 'home' });
-    };
-
-    return { post, error, handleClick };
-  },
+  router.push({ name: 'home' });
 };
 </script>
 
@@ -32,7 +25,9 @@ export default {
   <div v-if="post" class="details-view">
     <h3 class="details-view__title">{{ post.title }}</h3>
     <p class="details-view__text">{{ post.body }}</p>
-    <button @click="handleClick" class="details-view__delete">delete post</button>
+    <button @click="handleClick" class="details-view__delete">
+      delete post
+    </button>
   </div>
   <div v-else>
     <Spinner />

@@ -1,16 +1,11 @@
-<script>
+<script setup>
 import { computed } from '@vue/runtime-core';
 
-export default {
-  props: ['post'],
-  setup(props) {
-    const snippet = computed(() => {
-      return props.post.body.substring(0, 100) + '....';
-    });
+const props = defineProps(['post']);
 
-    return { snippet };
-  },
-};
+const snippet = computed(() => {
+  return props.post.body.substring(0, 100) + '....';
+});
 </script>
 
 <template>

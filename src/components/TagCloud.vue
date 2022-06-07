@@ -1,14 +1,9 @@
-<script>
+<script setup>
 import useTags from '../composables/useTags';
 
-export default {
-  props: ['posts'],
-  setup(props) {
-    const { tags } = useTags(props.posts);
+const props = defineProps(['posts']);
 
-    return { tags };
-  },
-};
+const { tags } = useTags(props.posts);
 </script>
 
 <template>
