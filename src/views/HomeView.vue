@@ -1,3 +1,14 @@
+<script setup>
+import PostList from '../components/PostList.vue';
+import TagCloud from '../components/TagCloud.vue';
+import getPosts from '../composables/getPosts';
+import Spinner from '../components/Spinner.vue';
+
+const { posts, error, load } = getPosts();
+
+load();
+</script>
+
 <template>
   <div class="homeview">
     <h1>Home</h1>
@@ -11,17 +22,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import PostList from '../components/PostList.vue';
-import TagCloud from '../components/TagCloud.vue';
-import getPosts from '../composables/getPosts';
-import Spinner from '../components/Spinner.vue';
-
-const { posts, error, load } = getPosts();
-
-load();
-</script>
 
 <style lang="scss">
 .homeview {

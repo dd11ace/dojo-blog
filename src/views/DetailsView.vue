@@ -1,17 +1,3 @@
-<template>
-  <div v-if="error">{{ error }}</div>
-  <div v-if="post" class="details">
-    <h3 class="details__title">{{ post.title }}</h3>
-    <p class="details__text">{{ post.body }}</p>
-    <button @click="handleClick" class="button details__delete">
-      delete post
-    </button>
-  </div>
-  <div v-else>
-    <Spinner />
-  </div>
-</template>
-
 <script>
 import getPost from '../composables/getPost';
 import Spinner from '../components/Spinner.vue';
@@ -41,6 +27,21 @@ export default {
 };
 </script>
 
+<template>
+  <div v-if="error">{{ error }}</div>
+  <div v-if="post" class="details">
+    <h3 class="details__title">{{ post.title }}</h3>
+    <p class="details__text">{{ post.body }}</p>
+    <button @click="handleClick" class="button details__delete">
+      delete post
+    </button>
+  </div>
+  <div v-else>
+    <Spinner />
+  </div>
+</template>
+
+
 <style lang="scss">
 .details {
   max-width: 1200px;
@@ -53,19 +54,19 @@ export default {
     color: white;
     font-size: 20px;
     margin-bottom: 10px;
-  }
 
-  &__title::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #ff8800;
-    position: absolute;
-    z-index: -1;
-    padding-right: 40px;
-    left: -30px;
-    transform: rotateZ(-1.5deg);
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #ff8800;
+      position: absolute;
+      z-index: -1;
+      padding-right: 40px;
+      left: -30px;
+      transform: rotateZ(-1.5deg);
+    }
   }
 
   &__text {

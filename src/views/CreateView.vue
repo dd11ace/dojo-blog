@@ -1,27 +1,3 @@
-<template>
-  <div class="create">
-    <form @submit.prevent="handleSubmit">
-      <label class="create__title">Title:</label>
-      <input class="create__input" v-model="title" type="text" required />
-      <label class="create__title">Content</label>
-      <textarea
-        class="create__input create__input--textarea"
-        v-model="body"
-        required
-      ></textarea>
-      <label class="create__title">Tags (hit enter to add a tag)</label>
-      <input
-        class="create__input"
-        v-model="tag"
-        type="text"
-        @keydown.enter.prevent="handleKeydown"
-      />
-      <div v-for="tag in tags" :key="tag" class="create__tag">#{{ tag }}</div>
-      <button class="create__button">Add Post</button>
-    </form>
-  </div>
-</template>
-
 <script setup>
 import { ref } from '@vue/reactivity';
 import { projectFirestore, timestamp } from '@/firebase/config';
@@ -58,8 +34,35 @@ const handleSubmit = async () => {
 };
 </script>
 
+<template>
+  <div class="create-view">
+    <form @submit.prevent="handleSubmit">
+      <label class="create-view__title">Title:</label>
+      <input class="create-view__input" v-model="title" type="text" required />
+      <label class="create-view__title">Content</label>
+      <textarea
+        class="create-view__input create-view__input--textarea"
+        v-model="body"
+        required
+      ></textarea>
+      <label class="create-view__title">Tags (hit enter to add a tag)</label>
+      <input
+        class="create-view__input"
+        v-model="tag"
+        type="text"
+        @keydown.enter.prevent="handleKeydown"
+      />
+      <div v-for="tag in tags" :key="tag" class="create-view__tag">
+        #{{ tag }}
+      </div>
+      <button class="create-view__button">Add Post</button>
+    </form>
+  </div>
+</template>
+
+
 <style lang="scss">
-.create {
+.create-view {
   max-width: 480px;
   margin: 0 auto;
   text-align: left;
@@ -71,10 +74,10 @@ const handleSubmit = async () => {
     box-sizing: border-box;
     padding: 10px;
     border: 1px solid #eee;
-  }
 
-  &__input--textarea {
-    height: 160px;
+    &--textarea {
+      height: 160px;
+    }
   }
 
   &__title {
@@ -84,19 +87,19 @@ const handleSubmit = async () => {
     font-size: 20px;
     color: white;
     margin-bottom: 10px;
-  }
 
-  &__title::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #ff8800;
-    position: absolute;
-    z-index: -1;
-    padding-right: 40px;
-    left: -30px;
-    transform: rotateZ(-1.5deg);
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #ff8800;
+      position: absolute;
+      z-index: -1;
+      padding-right: 40px;
+      left: -30px;
+      transform: rotateZ(-1.5deg);
+    }
   }
 
   &__button {
@@ -118,6 +121,5 @@ const handleSubmit = async () => {
     border-radius: 20px;
     font-size: 14px;
   }
-  
 }
 </style>

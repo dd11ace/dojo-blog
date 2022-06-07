@@ -1,13 +1,3 @@
-<template>
-  <div class="single-post">
-    <router-link :to="{ name: 'Details', params: { id: post.id } }">
-      <h3 class="single-post__title">{{ post.title }}</h3>
-    </router-link>
-    <p>{{ snippet }}</p>
-    <span v-for="tag in post.tags" :key="tag"> #{{ tag }} </span>
-  </div>
-</template>
-
 <script>
 import { computed } from '@vue/runtime-core';
 
@@ -22,6 +12,16 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div class="single-post">
+    <router-link :to="{ name: 'Details', params: { id: post.id } }">
+      <h3 class="single-post__title">{{ post.title }}</h3>
+    </router-link>
+    <p>{{ snippet }}</p>
+    <span v-for="tag in post.tags" :key="tag"> #{{ tag }} </span>
+  </div>
+</template>
 
 <style lang="scss">
 .single-post {

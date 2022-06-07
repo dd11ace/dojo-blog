@@ -2,12 +2,16 @@
   <header class="navbar-header">
     <h1 class="navbar-header__title">The Dojo Blog</h1>
     <nav class="navbar-header__list">
-      <router-link :to="{ name: 'home' }" class="navbar-header__list-item"
-        >Home</router-link
-      >
-      <router-link :to="{ name: 'Create' }" class="navbar-header__list-item"
-        >Create Post</router-link
-      >
+      <li>
+        <router-link :to="{ name: 'home' }" class="navbar-header__list-item"
+          >Home</router-link
+        >
+      </li>
+      <li>
+        <router-link :to="{ name: 'Create' }" class="navbar-header__list-item"
+          >Create Post</router-link
+        >
+      </li>
     </nav>
   </header>
 </template>
@@ -21,6 +25,11 @@
   margin: 0 auto;
   padding: 10px;
 
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+
   &__title {
     color: #dfdfdf;
     font-size: 48px;
@@ -29,10 +38,10 @@
     color: #bbb;
     text-decoration: none;
     margin-left: 20px;
-  }
-  &__list-item.router-link-active {
-    color: #444;
-    font-weight: bold;
+    &.router-link-active {
+      color: #444;
+      font-weight: bold;
+    }
   }
 }
 </style>
