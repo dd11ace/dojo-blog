@@ -12,18 +12,18 @@ const routes = [
   },
   {
     path: '/posts/:id',
-    name: 'Details',
+    name: 'details',
     component: DetailsView,
     props: true,
   },
   {
     path: '/create',
-    name: 'Create',
+    name: 'dreate',
     component: CreateView,
   },
   {
     path: '/tags/:tag',
-    name: 'Tag',
+    name: 'tag',
     component: TagView,
   },
 ];

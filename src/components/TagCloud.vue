@@ -11,7 +11,7 @@ const { tags } = useTags(props.posts);
     <h3 class="tag-cloud__title">Tags</h3>
     <div v-for="tag in tags" :key="tag" class="tag-cloud__list">
       <router-link
-        :to="{ name: 'Tag', params: { tag } }"
+        :to="{ name: 'tag', params: { tag } }"
         class="tag-cloud__list-item"
       >
         #{{ tag }}

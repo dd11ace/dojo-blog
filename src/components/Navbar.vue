@@ -8,7 +8,7 @@
         >
       </li>
       <li>
-        <router-link :to="{ name: 'Create' }" class="navbar-header__list-item"
+        <router-link :to="{ name: 'create' }" class="navbar-header__list-item"
           >Create Post</router-link
         >
       </li>

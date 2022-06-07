@@ -7,7 +7,6 @@ import { projectFirestore } from '@/firebase/config';
 const props = defineProps(['id']);
 const route = useRoute();
 const router = useRouter();
-console.log(route);
 
 const { post, error, load } = getPost(route.params.id);
 

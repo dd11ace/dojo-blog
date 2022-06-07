@@ -10,7 +10,7 @@ const snippet = computed(() => {
 
 <template>
   <div class="single-post">
-    <router-link :to="{ name: 'Details', params: { id: post.id } }">
+    <router-link :to="{ name: 'details', params: { id: post.id } }">
       <h3 class="single-post__title">{{ post.title }}</h3>
     </router-link>
     <p>{{ snippet }}</p>

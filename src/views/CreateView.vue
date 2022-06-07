@@ -44,7 +44,7 @@ const handleSubmit = async () => {
         class="create-view__input create-view__input--textarea"
         v-model="body"
         required
-      ></textarea>
+      />
       <label class="create-view__title">Tags (hit enter to add a tag)</label>
       <input
         class="create-view__input"
