@@ -17,7 +17,7 @@ const postsWithTag = computed(() => {
 </script>
 
 <template>
-  <div class="tagview">
+  <div class="tag-view">
     <div v-if="error">{{ error }}</div>
     <div v-if="posts.length" class="layout">
       <PostList :posts="postsWithTag" />
@@ -30,7 +30,7 @@ const postsWithTag = computed(() => {
 </template>
 
 <style>
-.tag {
+.tag-view {
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px;

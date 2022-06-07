@@ -29,10 +29,10 @@ export default {
 
 <template>
   <div v-if="error">{{ error }}</div>
-  <div v-if="post" class="details">
-    <h3 class="details__title">{{ post.title }}</h3>
-    <p class="details__text">{{ post.body }}</p>
-    <button @click="handleClick" class="details__delete">delete post</button>
+  <div v-if="post" class="details-view">
+    <h3 class="details-view__title">{{ post.title }}</h3>
+    <p class="details-view__text">{{ post.body }}</p>
+    <button @click="handleClick" class="details-view__delete">delete post</button>
   </div>
   <div v-else>
     <Spinner />
@@ -40,7 +40,7 @@ export default {
 </template>
 
 <style lang="scss">
-.details {
+.details-view {
   max-width: 1200px;
   margin: 0 auto;
 

@@ -8,12 +8,11 @@ const { posts, error, load } = getPosts();
 
 load();
 </script>
-
 <template>
-  <div class="homeview">
+  <div class="home-view">
     <h1>Home</h1>
     <div v-if="error">{{ error }}</div>
-    <div v-if="posts.length" class="homeview__content">
+    <div v-if="posts.length" class="home-view__content">
       <PostList :posts="posts" />
       <TagCloud :posts="posts" />
     </div>
@@ -24,7 +23,7 @@ load();
 </template>
 
 <style lang="scss">
-.homeview {
+.home-view {
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px;
