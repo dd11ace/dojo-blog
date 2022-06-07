@@ -27,7 +27,7 @@ const handleSubmit = async () => {
     createdAt: timestamp(),
   };
 
-  const res = await projectFirestore.collection('posts').add(post);
+  await projectFirestore.collection('posts').add(post);
 
   router.push({ name: 'home' });
 };

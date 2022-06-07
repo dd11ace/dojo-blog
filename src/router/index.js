@@ -1,8 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import DetailsView from '../views/DetailsView.vue';
-import CreateView from '../views/CreateView.vue';
-import TagView from '../views/TagView.vue';
 
 const routes = [
   {
@@ -13,18 +10,18 @@ const routes = [
   {
     path: '/posts/:id',
     name: 'details',
-    component: DetailsView,
+    component: () => import('@/views/DetailsView.vue'),
     props: true,
   },
   {
     path: '/create',
     name: 'create',
-    component: CreateView,
+    component: () => import('@/views/CreateView.vue'),
   },
   {
     path: '/tags/:tag',
     name: 'tag',
-    component: TagView,
+    component: () => import('@/views/TagView.vue'),
   },
 ];
 

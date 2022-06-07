@@ -7,9 +7,4 @@ import Navbar from '@/components/Navbar.vue';
   <RouterView />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: var(--black-blue);
-}
-</style>
+<style></style>
