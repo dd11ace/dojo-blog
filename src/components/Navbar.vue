@@ -1,23 +1,25 @@
+<script setup>
+import { RouterLink } from 'vue-router';
+
+const NAV_ITEMS = [
+  { title: 'Home', routeName: 'home' },
+  { title: 'Create Post', routeName: 'create' },
+];
+</script>
+
 <template>
-  <header class="navbar-header">
-    <h1 class="navbar-header__title">The Dojo Blog</h1>
-    <nav>
-      <ul class="navbar-header__list">
-        <li>
-          <router-link
-            :to="{ name: 'home' }"
-            class="navbar-header__item"
-            active-class="navbar-header__item--active"
-            >Home</router-link
+  <header class="navbar">
+    <h1 class="navbar__title">The Dojo Blog</h1>
+    <nav class="navbar__nav">
+      <ul class="navbar__list">
+        <li class="navbar__item" v-for="navItem in NAV_ITEMS">
+          <RouterLink
+            class="navbar__link"
+            active-class="navbar__link--active"
+            :to="{ name: navItem.routeName }"
           >
-        </li>
-        <li>
-          <router-link
-            :to="{ name: 'create' }"
-            class="navbar-header__item"
-            active-class="navbar-header__item--active"
-            >Create Post</router-link
-          >
+            {{ navItem.title }}
+          </RouterLink>
         </li>
       </ul>
     </nav>
@@ -25,7 +27,7 @@
 </template>
 
 <style lang="scss">
-.navbar-header {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +45,7 @@
     font-size: 48px;
   }
 
-  &__item {
+  &__link {
     color: var(--gray-4);
     text-decoration: none;
     margin-left: 20px;
