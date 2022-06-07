@@ -12,7 +12,8 @@ const { tags } = useTags(props.posts);
     <div v-for="tag in tags" :key="tag" class="tag-cloud__list">
       <router-link
         :to="{ name: 'tag', params: { tag } }"
-        class="tag-cloud__list-item tag-cloud__list-item--active"
+        class="tag-cloud__item"
+        active-class="tag-cloud__item--active"
       >
         #{{ tag }}
       </router-link>
@@ -24,7 +25,7 @@ const { tags } = useTags(props.posts);
 .tag-cloud {
   padding: 10px;
   &__title {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--gray-1);
     padding: 16px 8px;
     color: var(--dark-grey);
   }
@@ -32,17 +33,15 @@ const { tags } = useTags(props.posts);
   &__list {
     display: inline-block;
     padding: 10px;
-
-  &-item {
-    color: var(--light-gray);
+  }
+  &__item {
+    color: var(--gray-2);
     text-decoration: none;
-    
-    &--active.router-link-active {
+
+    &--active {
       color: var(--main-orange);
       font-weight: bold;
     }
   }
-  }
-
 }
 </style>

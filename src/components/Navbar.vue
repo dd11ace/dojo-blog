@@ -5,14 +5,16 @@
       <li>
         <router-link
           :to="{ name: 'home' }"
-          class="navbar-header__list-item navbar-header__list-item--active"
+          class="navbar-header__item"
+          active-class="navbar-header__item--active"
           >Home</router-link
         >
       </li>
       <li>
         <router-link
           :to="{ name: 'create' }"
-          class="navbar-header__list-item navbar-header__list-item--active"
+          class="navbar-header__item"
+          active-class="navbar-header__item--active"
           >Create Post</router-link
         >
       </li>
@@ -38,12 +40,13 @@
     color: var(--light-gray);
     font-size: 48px;
   }
-  &__list-item {
+
+  &__item {
     color: var(--gray);
     text-decoration: none;
     margin-left: 20px;
-    
-    &--active.router-link-active {
+
+    &--active {
       color: var(--dark-grey);
       font-weight: bold;
     }

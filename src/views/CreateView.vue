@@ -71,7 +71,7 @@ const handleSubmit = async () => {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
-    border: 1px solid #eee;
+    border: 1px solid var(--gray-1);
 
     &--textarea {
       height: 160px;
@@ -104,7 +104,7 @@ const handleSubmit = async () => {
     display: inline-block;
     margin: 10px 10px 0 0;
     color: var(--dark-grey);
-    background: #ddd;
+    background: var(--gray-3);
     padding: 8px;
     border-radius: 20px;
     font-size: 14px;
